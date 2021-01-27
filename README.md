@@ -18,8 +18,8 @@ Add the following to your `.zshrc`:
 
 ```
 if [[ -n $SSH_CONNECTION ]]; then                                               
-    ZSH_THEME="zeta-tomorrow/zeta-tomorrow-remote"                              
+    ZSH_THEME="zeta-tomorrow-remote"                              
     else                                                                            
-    ZSH_THEME="zeta-tomorrow/zeta-tomorrow-local"
+    ZSH_THEME="zeta-tomorrow-local"
 fi 
 ```
