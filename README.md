@@ -6,3 +6,20 @@ zeta-tomorrow is based on [zeta](https://github.com/skylerlee/zeta-zsh-theme), a
   - together with `yadm-prompt` it displays the yadm status of the current directory.
   - displays IP address if connected through SSH
 
+## Use
+
+Copy both theme files to `~/.oh-my-zsh/custom/themes/`:
+
+```
+$ curl "https://raw.githubusercontent.com/janebuoy/zeta-tomorrow/main/zeta-tomorrow-{local,remote}.zsh-theme" -o ~/.oh-my-zsh/custom/themes/zeta-tomorrow-#1.zsh-theme
+```
+
+Add the following to your `.zshrc`:
+
+```
+if [[ -n $SSH_CONNECTION ]]; then                                               
+    ZSH_THEME="zeta-tomorrow/zeta-tomorrow-remote"                              
+    else                                                                            
+    ZSH_THEME="zeta-tomorrow/zeta-tomorrow-local"
+fi 
+```

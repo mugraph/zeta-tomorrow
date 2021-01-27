@@ -1,8 +1,6 @@
 #!/bin/zsh
-# Zeta theme for oh-my-zsh
-# Tested on Linux, Unix and Windows under ANSI colors.
-# Copyright: Jane Buoy, 2021
-# Copyright: Skyler Lee, 2015
+# zeta-tomorrow theme for oh-my-zsh
+# Copyright (c) 2021 janebuoy
 
 # Colors: black|red|blue|green|yellow|magenta|cyan|white
 local black=$fg[black]
