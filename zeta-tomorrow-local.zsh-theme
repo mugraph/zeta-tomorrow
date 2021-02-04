@@ -127,16 +127,18 @@ function get_prompt_indicator {
     fi
 }
 
+function print_rprompt (){
+    # Check if in git or yadm dir
+    if [[ -n $(git rev-parse --is-inside-work-tree 2>/dev/null) ]]; then
+        RPROMPT='$(git_prompt_short_sha) '
+    elif [[ $PWD/ == $yadm_root/* ]]; then
+        RPROMPT='$(yadm_prompt_short_sha) '
+    fi
+}
+
 autoload -U add-zsh-hook
 add-zsh-hook precmd print_prompt_head
+add-zsh-hook precmd print_rprompt
 setopt prompt_subst
 
 PROMPT='$(get_prompt_indicator)'
-
-# Check if in git or yadm dir
-if [[ -n $(git rev-parse --is-inside-work-tree 2>/dev/null) ]]; then
-    RPROMPT='$(git_prompt_short_sha) '
-elif [[ $PWD/ = $yadm_root/* && -n $(yadm rev-parse --is-inside-work-tree 2>/dev/null) ]]; then
-    RPROMPT='$(yadm_prompt_short_sha) '
-fi
-
