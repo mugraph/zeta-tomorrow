@@ -6,7 +6,7 @@ zeta-tomorrow is based on [zeta](https://github.com/skylerlee/zeta-zsh-theme), a
   - together with [yadm-prompt](https://github.com/janebuoy/yadm-prompt) it displays the yadm status of the current directory.
   - displays IP address if connected through SSH
 
-## Use
+## Usage
 
 Copy both theme files to `~/.oh-my-zsh/custom/themes/`:
 
