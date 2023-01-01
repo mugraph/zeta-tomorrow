@@ -110,11 +110,11 @@ function get_space {
 # Prompt: # USER@MACHINE: DIRECTORY <BRANCH [STATUS]> --- (TIME_STAMP)
 # > command
 function print_prompt_head {
-    IP=$(ifconfig -a | grep inet | tail -1 | awk '{print $2}' | cut -d':' -f2)
+    IP=$(ip route get 1.2.3.4 | awk '{print $7}')
     local left_prompt="\
 %{$yellow_bold%}$(get_usr_name)\
 %{$magenta%}@\
-%{$blue_bold%}$IP ($(get_box_name)): \
+%{$blue_bold%}$(get_box_name)|$IP: \
 %{$cyan_bold%}$(get_current_dir)%{$reset_color%}\
 $(get_git_prompt) "
     print -rP "$left_prompt$(get_space $left_prompt)"
