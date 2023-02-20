@@ -11,7 +11,7 @@ zeta-tomorrow is based on [zeta](https://github.com/skylerlee/zeta-zsh-theme), a
 Copy both theme files to `~/.oh-my-zsh/custom/themes/`:
 
 ```
-$ curl -fsSL "https://raw.githubusercontent.com/janebuoy/zeta-tomorrow/main/zeta-tomorrow-{local,remote}.zsh-theme" -o ~/.oh-my-zsh/custom/themes/zeta-tomorrow-#1.zsh-theme
+$ curl -fsSL "https://raw.githubusercontent.com/mugraph/zeta-tomorrow/main/zeta-tomorrow-{local,remote}.zsh-theme" -o ~/.oh-my-zsh/custom/themes/zeta-tomorrow-#1.zsh-theme
 ```
 
 Add the following to your `.zshrc`:
